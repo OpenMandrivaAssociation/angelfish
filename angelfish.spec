@@ -2,8 +2,8 @@
 #define commit 741828b3123f8b8c9e61f683fceac5a72763e237
 
 Name:		angelfish
-Version:	21.06
-Release:	%{?snapshot:0.%{snapshot}.}1
+Version:	21.07
+Release:	%{?snapshot:1.%{snapshot}.}1
 Summary:	Browser for Plasma Mobile
 %if 0%{?snapshot}
 Source0:	https://invent.kde.org/plasma-mobile/plasma-angelfish/-/archive/v%{version}/plasma-angelfish-v%{version}.tar.bz2
