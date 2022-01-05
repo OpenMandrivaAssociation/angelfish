@@ -26,6 +26,10 @@ BuildRequires:	cmake(Qt5QuickControls2)
 BuildRequires:	cmake(KF5Kirigami2)
 BuildRequires:	cmake(KF5Purpose)
 BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5Config)
+BuildRequires:	cmake(KF5DBusAddons)
+BuildRequires:	cmake(KF5WindowSystem)
+BuildRequires:	cmake(KF5Notifications)
 BuildRequires:	cmake(Qt5WebEngine)
 
 %description
