@@ -2,7 +2,7 @@
 #define commit 741828b3123f8b8c9e61f683fceac5a72763e237
 
 Name:		angelfish
-Version:	22.11
+Version:	23.01.0
 Release:	%{?snapshot:1.%{snapshot}.}1
 Summary:	Browser for Plasma Mobile
 %if 0%{?snapshot}
