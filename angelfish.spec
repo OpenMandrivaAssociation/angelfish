@@ -34,6 +34,7 @@ BuildRequires:	cmake(KF5Notifications)
 BuildRequires:	cmake(KF5KirigamiAddons)
 BuildRequires:	cmake(KF5QQC2DesktopStyle)
 BuildRequires:	cmake(Qt5WebEngine)
+BuildRequires:	cmake(FutureSQL5)
 
 %description
 Browser for Plasma Mobile
