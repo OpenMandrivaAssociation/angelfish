@@ -31,6 +31,8 @@ BuildRequires:	cmake(KF5Config)
 BuildRequires:	cmake(KF5DBusAddons)
 BuildRequires:	cmake(KF5WindowSystem)
 BuildRequires:	cmake(KF5Notifications)
+BuildRequires:	cmake(KF5KirigamiAddons)
+BuildRequires:	cmake(KF5QQC2DesktopStyle)
 BuildRequires:	cmake(Qt5WebEngine)
 
 %description
