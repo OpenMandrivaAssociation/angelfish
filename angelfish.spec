@@ -3,7 +3,7 @@
 #define commit 741828b3123f8b8c9e61f683fceac5a72763e237
 
 Name:		angelfish
-Version:	23.08.3
+Version:	23.08.4
 Release:	%{?git:0.%{git}.}1
 Summary:	Browser for Plasma Mobile
 %if 0%{?git}
