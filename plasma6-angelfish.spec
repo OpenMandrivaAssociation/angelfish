@@ -4,12 +4,13 @@
 
 Name:		plasma6-angelfish
 Version:	24.01.90
-Release:	%{?git:0.%{git}.}2
+Release:	%{?git:0.%{git}.}1
 Summary:	Browser for Plasma Mobile
+Url:		https://invent.kde.org/plasma-mobile/plasma-angelfish/
 %if 0%{?git}
 Source0:	https://invent.kde.org/plasma-mobile/plasma-angelfish/-/archive/v%{version}/plasma-angelfish-v%{version}.tar.bz2
 %else
-Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/angelfish-%{version}.tar.xz
+Source0:	https://download.kde.org/%{stable}/release-service/%{version}/src/angelfish-%{version}.tar.xz
 %endif
 License:	GPLv3
 Group:		Applications/Productivity
@@ -23,7 +24,11 @@ BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6Sql)
 BuildRequires:	cmake(Qt6Svg)
+BuildRequires:  cmake(Qt6Qml)
+BuildRequires:  cmake(Qt6QmlCore)
+BuildRequires:  cmake(Qt6QmlNetwork)
 BuildRequires:	cmake(Qt6QuickControls2)
+BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(KF6Kirigami2)
 BuildRequires:	cmake(KF6Purpose)
 BuildRequires:	cmake(KF6I18n)
@@ -36,6 +41,11 @@ BuildRequires:	cmake(KF6QQC2DesktopStyle)
 BuildRequires:	cmake(Qt6WebEngineCore)
 BuildRequires:	cmake(FutureSQL6)
 BuildRequires:	cmake(QCoro6)
+BuildRequires:	BuildRequires:  qt6-qtbase-theme-gtk3
+BuildRequires:	qt6-qtbase-sql-postgresql
+BuildRequires:	qt6-qtbase-sql-odbc
+BuildRequires:	qt6-qtbase-sql-mariadb
+BuildRequires:	qt6-qtbase-sql-firebird
 
 %description
 Browser for Plasma Mobile
