@@ -18,7 +18,7 @@ BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6Core)
-BuildRequires:	cmake(Qt6Feedback)
+#BuildRequires:	cmake(Qt6Feedback)
 BuildRequires:	cmake(KF6UserFeedback)
 BuildRequires:	cmake(Qt6Quick)
 BuildRequires:	cmake(Qt6Test)
