@@ -1,14 +1,16 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-#define git 20200710
+%define git 20240218
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 #define commit 741828b3123f8b8c9e61f683fceac6a72763e237
 
 Name:		plasma6-angelfish
-Version:	24.01.95
+Version:	24.01.96
 Release:	%{?git:0.%{git}.}1
 Summary:	Browser for Plasma Mobile
-Url:		https://invent.kde.org/plasma-mobile/plasma-angelfish/
+Url:		https://invent.kde.org/network/angelfish
 %if 0%{?git}
-Source0:	https://invent.kde.org/plasma-mobile/plasma-angelfish/-/archive/v%{version}/plasma-angelfish-v%{version}.tar.bz2
+Source0:	https://invent.kde.org/network/angelfish/-/archive/%{gitbranch}/angelfish-%{gitbranchd}.tar.bz2
 %else
 Source0:	https://download.kde.org/%{stable}/release-service/%{version}/src/angelfish-%{version}.tar.xz
 %endif
@@ -53,11 +55,7 @@ BuildRequires:	qt6-qtbase-sql-firebird
 Browser for Plasma Mobile
 
 %prep
-%if 0%{?git}
-%autosetup -p1 -n angelfish-v%{version}-77d166fabe18740a63cd1894a67666e893b13eab
-%else
-%autosetup -p1 -n angelfish-%{?git:master}%{!?git:%{version}}
-%endif
+%autosetup -p1 -n angelfish-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja -G Ninja
