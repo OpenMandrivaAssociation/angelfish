@@ -1,11 +1,11 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20240218
+#define git 20240218
 %define gitbranch release/24.02
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 #define commit 741828b3123f8b8c9e61f683fceac6a72763e237
 
 Name:		plasma6-angelfish
-Version:	24.01.96
+Version:	24.02.0
 Release:	%{?git:0.%{git}.}1
 Summary:	Browser for Plasma Mobile
 Url:		https://invent.kde.org/network/angelfish
