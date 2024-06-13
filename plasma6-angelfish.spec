@@ -5,7 +5,7 @@
 #define commit 741828b3123f8b8c9e61f683fceac6a72763e237
 
 Name:		plasma6-angelfish
-Version:	24.05.0
+Version:	24.05.1
 Release:	%{?git:0.%{git}.}1
 Summary:	Browser for Plasma Mobile
 Url:		https://invent.kde.org/network/angelfish
