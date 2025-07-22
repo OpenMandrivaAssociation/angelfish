@@ -5,7 +5,7 @@
 #define commit 741828b3123f8b8c9e61f683fceac6a72763e237
 
 Name:		angelfish
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Summary:	Browser for Plasma Mobile
 Url:		https://invent.kde.org/network/angelfish
@@ -51,23 +51,15 @@ BuildRequires:	qt6-qtbase-sql-odbc
 BuildRequires:	qt6-qtbase-sql-mariadb
 BuildRequires:	qt6-qtbase-sql-firebird
 
+%rename plasma6-angelfish
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Browser for Plasma Mobile
 
-%prep
-%autosetup -p1 -n angelfish-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja -G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-%find_lang angelfish
-
-%files -f angelfish.lang
+%files -f %{name}.lang
 %{_bindir}/angelfish
 %{_bindir}/angelfish-webapp
 %{_datadir}/config.kcfg/angelfishsettings.kcfg
