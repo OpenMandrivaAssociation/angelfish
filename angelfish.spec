@@ -45,6 +45,9 @@ BuildRequires:	cmake(KF6QQC2DesktopStyle)
 BuildRequires:	cmake(Qt6WebEngineCore)
 BuildRequires:	cmake(FutureSQL6)
 BuildRequires:	cmake(QCoro6)
+BuildRequires:	cmake(Qt6Feedback)
+BuildRequires:	cmake(KF6Crash)
+BuildRequires:	cmake(Qt6QmlAssetDownloader)
 BuildRequires:	qt6-qtbase-theme-gtk3
 BuildRequires:	qt6-qtbase-sql-postgresql
 BuildRequires:	qt6-qtbase-sql-odbc
