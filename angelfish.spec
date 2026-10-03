@@ -6,7 +6,7 @@
 
 Name:		angelfish
 Version:	26.08.1
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Summary:	Browser for Plasma Mobile
 Url:		https://invent.kde.org/network/angelfish
 %if 0%{?git}
