@@ -20,7 +20,10 @@ BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6Core)
-#BuildRequires:	cmake(Qt6Feedback)
+# Qt6 Feedback is unmaintained. HapticsEffectWrapper.qml is loaded through a
+# Loader, so a missing module only disables vibration. The Qt5 module cannot
+# satisfy this Qt 6 application.
+%global __requires_exclude ^qml\\(QtFeedback\\)$
 BuildRequires:	cmake(KF6UserFeedback)
 BuildRequires:	cmake(Qt6Quick)
 BuildRequires:	cmake(Qt6Test)
